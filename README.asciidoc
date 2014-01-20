@@ -6,33 +6,34 @@
 * HTMLは近い将来のための世界のマークアップ言語です。
 * ワンソースのドキュメント処理は近い将来のために価値があり、存続するでしょう。
 
-As such, HTMLBook can be characterized in the following ways:
+HTMLBook自体は以下のように特徴づけられています:
 
-* HTMLBook is a subset of XHTML5. All HTMLBook is HTML5, but not all HTML5 is HTMLBook.
-* HTMLBook contains no additional elements or attributes outside of the HTML5 specification.
-* HTMLBook is semantically tailored to the structure of a book, including more complex content used in technical and reference documents.
-* HTMLBook is defined with and can be validated against an XML schema.
-* HTMLBook stylesheets are written in CSS.
+* HTMLBookはXHTML5のサブセットである。すべてのHTMLBookはHTML5であるが、すべてのHTML5がHTMLBookであるわけではない。
+* HTMLBookはHTML5仕様にはない追加の要素や属性を含まない。
+* HTMLBookは、技術的ドキュメントまたはリファレンスドキュメントで使用されるより複雑なコンテンツも含め、意味的に本の構造にあわせてある。
+* HTMLBookはXMLスキーマで定義されており、XMLスキーマで妥当性を検証できる。
+* HTMLBookのスタイルシートはCSSで記述されている。
 
-=== Getting Started with HTMLBook
+=== HTMLBookを始める
 
-Read the Working Draft of the HTMLBook Specification here:
+ここにあるHTMLBook仕様のワーキングドラフトを読んでください:
 
 https://github.com/oreillymedia/HTMLBook/blob/master/specification.asciidoc
 
-Get the HTMLBook schema here:
+ここからHTMLBookスキーマを入手してください:
 
 https://github.com/oreillymedia/HTMLBook/tree/master/schema
 
-The main HTMLBook Schema file is +htmlbook.xsd+, which imports Schemas (via W3C) for MathML and SVG validation.
+HTMLBookのメインスキーマファイルは +htmlbook.xsd+, です、これはMathMLおよびSVGの妥当性を検証するための（W3Cによる）スキーマをインポートしています。
 
-You can validate HTML documents against +htmlbook.xsd+ on the command line using +xmllint+:
+HTMLドキュメントは、 +htmlbook.xsd+ で、コマンドラインで +xmllint+ を使うことにより妥当性を検証できます:
 
 ----
 $ xmllint --noout --schema htmlbook.xsd <your_html_filename>.html
 ----
 
-Alternatively, to validate in a GUI XML editor like oXygen, add a +xsi:schemaLocation+ declaration to the root +<html>+ element as follows:
+代替手段として、oXygenのようなGUI XMLエディタで妥当性を検証するためには、次のようにルート +<html>+ 要素に +xsi:schemaLocation+ 宣言を追加してください:
+
 
 ----
 <html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -40,12 +41,12 @@ Alternatively, to validate in a GUI XML editor like oXygen, add a +xsi:schemaLoc
  xmlns="http://www.w3.org/1999/xhtml">
 ----
 
-=== Notes on HTMLBook
+=== HTMLBookに関する注記（原注）
 
-* The HTMLBook specification is currently in Working Draft status, and will continue to be developed and revised for the foreseeable future.
+* HTMLBook仕様は現在ワーキングドラフトの過程であり、当分の間開発・改訂され続けます。
 
-* If you have any bugs or feature requests for HTMLBook, please submit them via the Issues tab in GitHub.
+* HTMLBookについてバグや機能の要望があれば、GitHubのIssuesタブを通じて投稿してください。
 
-* In the coming months, we will be adding additional tools to the HTMLBook project for authoring and producing books with HTMLBook: CSS stylesheets, scripts for generating EPUB/Mobi, etc.
+* 来月、本をHTMLBookでオーサリングおよび制作するための付属ツールをHTMLBookプロジェクトに追加します:CSSスタイルシート、EPUB/Mobiを生成するためのスクリプト、そのほか。
 
-* If you would like to contribute to the HTMLBook project, send us a pull request!
+* HTMLBookプロジェクトに貢献したければ、プルリクエストを送ってください！
