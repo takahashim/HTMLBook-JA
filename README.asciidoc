@@ -1,6 +1,6 @@
 === HTMLBook
 
-Let's write books in HTML! HTMLBook is an open, HTML5-based standard for the authoring and production of both print and digital books. HTMLBook is built on the following premises:
+本をHTMLで執筆しましょう！　HTMLBookはオープンで、HTML5ベースでプリントとデジタル双方の本を執筆・制作するための標準です。 HTMLBookは以下のような前提で作られています。
 
 * Books are timeless. The basic "book" structure has persisted for hundreds of years and will continue to persist for our lifetimes, be it in digital or print form. 
 * HTML is the markup language of the world for the foreseeable future.
