@@ -2,9 +2,9 @@
 
 本をHTMLで執筆しましょう！　HTMLBookはオープンで、HTML5ベースでプリントとデジタル双方の本を執筆・制作するための標準です。 HTMLBookは以下のような前提で作られています。
 
-* Books are timeless. The basic "book" structure has persisted for hundreds of years and will continue to persist for our lifetimes, be it in digital or print form. 
-* HTML is the markup language of the world for the foreseeable future.
-* Single-source document processing will remain valuable for the foreseeable future.
+* 本は不朽のものです。通常の"本"の構造は100年続いており、そしてデジタルまたは印刷物のかたちで我々の生涯続くでしょう。
+* HTMLは近い将来のための世界のマークアップ言語です。
+* ワンソースのドキュメント処理は近い将来のために価値があり、存続するでしょう。
 
 As such, HTMLBook can be characterized in the following ways:
 
