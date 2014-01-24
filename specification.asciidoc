@@ -10,7 +10,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 
 2013年12月29日: 
 
-* 明確さのための小さな改訂
+* 明確さのための小改訂
 
 2013年8月13日:
 
@@ -22,17 +22,17 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 
 2013年4月19日: ワーキングドラフト第1版リリース
 
-=== Book Component elements
+=== 本の構成要素
 
-==== Book
+==== 本
 
-*HTML element*: +<body>+
+*HTML 要素*: +<body>+
 
-*Attribute requirements*: +data-type="book"+ footnote:[Not in EPUB 3 Structural Semantics Vocabulary; from DocBook]
+*属性要件*: +data-type="book"+ footnote:[EPUB 3 Structural Semantics Vocabulary のものではなく、DocBook 由来のものである]
 
-*Content model*: First child must be +<h1>+ that contains book title; then zero or more +<h2>+ elements for subtitle content; then one or more Book Component elements as children (+<div>+ for Part elements, +<nav>+ for Table of Contents, and +<section>+ elements for all other book divisions)
+*コンテンツモデル*: 最初の子は本の題名を含む +<h1>+ であるべきである; 次に、副題名のコンテンツとして、0個またはそれ以上の +<h2>+ 要素; 次に、子として1個またはそれ以上の本の構成要素 (編／部要素を表す +<div>+ 、テーブルコンテンツを表す +<nav>+ 、そしてそのほかすべての本の区分を表す +<section>+ )。
 
-*Example*
+*例*
 
 [source, html]
 ----
@@ -44,7 +44,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </body>
 ----
 
-*Note*: Just as in standard HTML5, +<body>+ is a child of the root +<html>+ element.
+*原注*: HTML5標準同様, +<body>+ はルート +<html>+ 要素の子である。
 
 ==== Chapter
 
@@ -299,13 +299,13 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </section>
 ----
 
-=== Block elements
+=== ブロック要素
 
-==== Paragraph
+==== 節
 
-*HTML element*: +<p>+
+*HTML要素*: +<p>+
 
-*Example*:
+*例*:
 
 ----
 <p>This is a standard paragraph with some <em>emphasized text</em></p>
@@ -598,13 +598,13 @@ sidebar title -> h5
 </div>
 ----
 
-=== Inline Elements
+=== インライン要素
 
-==== Emphasis (generally for italic)
+==== 強調 (通常、斜体表記)
 
-*HTML element*: +<em>+
+*HTML要素*: +<em>+
 
-Example:
+*例*:
 
 ----
 <p>I <em>love</em> HTML!</p>
@@ -717,15 +717,15 @@ Example:
 <p>The formula for water is H<sub>2</sub>O</p>
 ----
 
-=== Interactive Elements
+=== インタラクティブ要素
 
-==== Video
+==== ビデオ
 
-*HTML element*: +<video>+
+*HTML要素*: +<video>+
 
-*Example*:
+*例*:
 
-*Note*: Fallback content is _strongly recommended_ for output formats that do not support HTML5 interactive content
+*原注*: HTML5 インタラクティブコンテンツをサポートしていない出力フォーマットのために、フォールバックコンテンツを _強く勧める_。
 
 ----
 <video id="asteroids_video" width="480" height="270" controls="controls" poster="images/fallback_image.png">
@@ -770,19 +770,19 @@ Canvas handling.
 </canvas>
 ----
 
-=== Metadata
+=== メタデータ
 
-==== Metadata points
+==== メタデータ項目
 
-*HTML element*: +<meta>+
+*HTML要素*: +<meta>+
 
-*Attribute requirements*: +name+ (for name of metadata point); +content+: (for value of metadata point)
+*属性要件*: +name+ (メタデータ項目の名称を表す); +content+: (メタデータ項目の値を表す)
 
-*Content model*: Empty
+*コンテンツモデル*: なし
 
-*Note*: All +<meta>+ elements must be children of the +<head>+ element of the HTML file.
+*原注*: すべての +<meta>+ 要素はHTMLファイルの +<head>+ 要素の子であるべきである。
 
-*Example*:
+*例*:
 
 ----
 <head>
@@ -791,12 +791,12 @@ Canvas handling.
 </head>
 ----
 
-=== Element Classification
+=== 要素の種別
 
 [[block_elements]]
-==== Block elements
+==== ブロック要素
 
-In HTMLBook, the majority of elements classified by the HTML5 specification as Flow content (minus elements also categorized as Heading Content, Phrasing Content, and Sectioning Content) are considered to be Block elements. Here is a complete list:
+HTMLBook では、HTML5 仕様においてフローコンテンツ (除外されている要素はまた、ヘディングコンテンツ、フレージングコンテンツ、またはセクショニングコンテンツとして分類されている) として分類されている要素の大多数はブロック要素と見なされている。一覧を示す:
 
 * +<address>+
 * +<aside>+
@@ -813,21 +813,21 @@ In HTMLBook, the majority of elements classified by the HTML5 specification as F
 * +<hr>+
 * +<iframe>+
 * +<map>+
-* +<math>+ (In MathML vocabulary; must be namespaced under http://www.w3.org/1998/Math/MathML)
+* +<math>+ (MathML の語彙; http://www.w3.org/1998/Math/MathML の名前空間下に置かれるべき)
 * +<menu>+
 * +<object>+
 * +<ol>+
 * +<p>+
 * +<pre>+
-* +<svg>+ (In SVG vocabulary; must be namespaced under http://www.w3.org/2000/svg)
+* +<svg>+ (SVG の語彙; http://www.w3.org/2000/svg の名前空間下に置かれるべき)
 * +<table>+
 * +<ul>+
 * +<video>+
 
 [[inline_elements]]
-==== Inline elements
+==== インライン要素
 
-In HTMLBook, the majority of elements classified by the HTML5 specification as Phrasing Content are considered to be Inline elements. Here is a complete list:
+HTMLBook では、HTML5 仕様においフレージングコンテンツとして分類されている要素の大多数はインライン要素と見なされている。一覧を示す:
 
 * +<a>+
 * +<abbr>+
