@@ -1,27 +1,26 @@
-== HTMLBook Specification: Working Draft (last updated 29 December 2013)
+== HTMLBook仕様: ワーキングドラフト (最終更新日 2013年12月29日)
 
-Requirements for HTML5 elements in the HTMLBook specification are below. Special semantic inflections for +data-type+ attributes, unless otherwise noted, come from http://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary]
+HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性の特有の意味的活用については、別途注記がない限り http://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary] による。
 
-Many content models refer to "Block elements" or "Inline elements"; please see <<block_elements, Block Elements>> and <<inline_elements, Inline Elements>> for the corresponding list of HTML5 elements that belong to each of these categories.
+コンテンツモデルの多くについては「ブロック要素」または「インライン要素」を参照のこと; これらの各カテゴリに属するHTML5の要素の対応するリストについては、 <<block_elements, Block Elements>> および <<inline_elements, Inline Elements>> を参照のこと。
 
-If no content model or attribute requirements are explicitly specified, then HTMLBook adopts the corresponding requirements in the http://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification]
+明記されていないコンテンツモデルまたは属性要件については、HTMLBook は http://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification] に対応する要件を採用している。
 
-=== Revision History and Notes
+=== 改訂履歴と注記
 
-29 December 2013: 
+2013年12月29日: 
 
-* Minor revisions for clarity
+* 明確さのための小さな改訂
 
-13 August 2013:
+2013年8月13日:
 
-* Revised specification for footnote markup
+* 脚注のマークアップの仕様を改訂
 
-3 July 2013:
+2013年7月3日:
 
-* Changed spec to use the attribute "data-type" for specifying book-specific semantics instead of "class". The "class" attribute is 
-now free to be used for whatever user-defined semantics are desired, and there are no restrictions on "class" values. Users of the spec  may want to replicate "data-type" values in the "class" attribute to facilitate CSS styling, but this is completely optional.
+* 本を特定するセマンティクスとして、"class" の代わりに "data-type" 属性を使用するよう仕様を改訂。現時点では "class" 属性はユーザが望んで定義したセマンティクスとして自由に使用でき、かつ "class" の値に制約はない。仕様のユーザは "data-type" の値を "class" 属性の値に複製することにより、容易に CSS での体裁付与をしたいかもしれないが、これは完全に任意である。
 
-19 April 2013: First release of Working Draft
+2013年4月19日: ワーキングドラフト第1版リリース
 
 === Book Component elements
 
