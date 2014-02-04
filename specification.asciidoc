@@ -724,7 +724,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 
 *例*:
 
-*原注*: HTML5インタラクティブコンテンツをサポートしていない出力フォーマットのために、フォールバックコンテンツを_強く勧める_。
+*原注*: HTML5インタラクティブコンテンツをサポートしていない出力フォーマットのために、フォールバックコンテンツを_強く推奨する_。
 
 ----
 <video id="asteroids_video" width="480" height="270" controls="controls" poster="images/fallback_image.png">
