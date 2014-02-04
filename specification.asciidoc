@@ -1,32 +1,32 @@
 == HTMLBook仕様: ワーキングドラフト (最終更新日 2013年12月29日)
 
-HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性の特有の意味的活用については、別途注記がない限り http://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary] による。
+HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性の特有の意味的活用については、別途注記がない限りhttp://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary]による。
 
-コンテンツモデルの多くについては「ブロック要素」または「インライン要素」を参照のこと; これらの各カテゴリに属するHTML5の要素の対応するリストについては、 <<block_elements, Block Elements>> および <<inline_elements, Inline Elements>> を参照のこと。
+コンテンツモデルの多くについては「ブロック要素」または「インライン要素」を参照のこと；これらの各カテゴリに属するHTML5の要素の対応するリストについては、<<block_elements, Block Elements>> および <<inline_elements, Inline Elements>>を参照のこと。
 
-明記されていないコンテンツモデルまたは属性要件については、HTMLBook は http://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification] に対応する要件を採用している。
+明記されていないコンテンツモデルまたは属性要件については、HTMLBookはhttp://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification]に対応する要件を採用している。
 
 === 改訂履歴と注記
 
-2013年12月29日: 
+2013年12月29日：ワーキングドラフト第4版リリース
 
 * 明確さのための小改訂
 
-2013年8月13日:
+2013年8月13日：ワーキングドラフト第3版リリース
 
 * 脚注のマークアップの仕様を改訂
 
-2013年7月3日:
+2013年7月3日：ワーキングドラフト第2版リリース
 
-* 本を特定するセマンティクスとして、"class" の代わりに "data-type" 属性を使用するよう仕様を改訂。現時点では "class" 属性はユーザが望んで定義したセマンティクスとして自由に使用でき、かつ "class" の値に制約はない。仕様のユーザは "data-type" の値を "class" 属性の値に複製することにより、容易に CSS での体裁付与をしたいかもしれないが、これは完全に任意である。
+* 本を特定するセマンティクスとして、"class"の代わりに"data-type"属性を使用するよう仕様を改訂。現時点では"class"属性はユーザが望んで定義したセマンティクスとして自由に使用でき、かつ"class"の値に制約はない。仕様のユーザは"data-type"の値を"class"属性の値に複製することにより容易にCSSでの体裁付与したいだろうが、これは完全に任意である。
 
-2013年4月19日: ワーキングドラフト第1版リリース
+2013年4月19日：ワーキングドラフト第1版リリース
 
 === 本の構成要素
 
 ==== 本
 
-*HTML 要素*: +<body>+
+*HTML要素*: +<body>+
 
 *属性要件*: +data-type="book"+ footnote:[EPUB 3 Structural Semantics Vocabulary のものではなく、DocBook 由来のものである]
 
@@ -44,17 +44,17 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </body>
 ----
 
-*原注*: HTML5標準同様, +<body>+ はルート +<html>+ 要素の子である。
+*原注*: HTML5標準同様、+<body>+はルート+<html>+要素の子である。
 
-==== Chapter
+==== 章
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="chapter"+ 
+*属性要件*: +data-type="chapter"+ 
 
-*Content model*: First child must be +<h1>+ that contains chapter title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は章の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*Example*
+*例*
 
 ----
 <section data-type="chapter">
@@ -67,15 +67,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Appendix
+==== 付録
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="appendix"+ or +data-type="afterword"+, depending on content
+*属性要件*: 内容によって+data-type="appendix"+または+data-type="afterword"+
 
-*Content model*: First child must be +<h1>+ that contains appendix title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は付録の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*Example*
+*例*
 
 ----
 <section data-type="appendix">
@@ -87,15 +87,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Bibliography
+==== 書誌
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="bibliography"+
+*属性要件*: +data-type="bibliography"+
 
-*Content model*: First child must be +<h1>+ that contains bibliography title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は書誌の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*Example*
+*例*
 
 ----
 <section data-type="bibliography">
@@ -107,18 +107,18 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-[[glossary]]
-==== Glossary
+[[用語集]]
+==== 用語集
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="glossary"+
+*属性要件*: +data-type="glossary"+
 
-*Content model*: First child must be +<h1>+ that contains glossary title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は用語集の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*Best practices*: List of glossary terms should be marked up using +<dl>+ elements with a +data-type+ of "glossary", with +<dt>+ children with a +data-type+ of "glossterm" and +<dd>+ children with a +data-type+ of "glossdef". Term text should be wrapped in a https://developer.mozilla.org/en-US/docs/HTML/Element/dfn[++<dfn>++]. However, none of this is formally required by the spec.
+*効率的な手法*:用語集の用語の一覧は+data-type+="glossary"の+<dl>+要素、+data-type+="glossterm"の+<dt>+の子、+data-type+="glossdef"の+<dd>+の子を使用してマークアップするべきである。用語の文字列はhttps://developer.mozilla.org/en-US/docs/HTML/Element/dfn[++<dfn>++]でラップするべきである。ただしこれは正式な仕様要件ではない。
 
-*Example*
+*例*
 
 ----
 <section data-type="glossary">
@@ -134,15 +134,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Preface
+==== 序文
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="preface"+, +data-type="foreword"+, or +data-type="introduction"+, depending on content
+*属性要件*: 内容によって+data-type="preface"+、+data-type="foreword"+、または +data-type="introduction"+
 
-*Content model*: First child must be +<h1>+ that contains preface title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は序文の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*Example*
+*例*
 
 ----
 <section data-type="preface">
@@ -154,15 +154,16 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Frontmatter
 
-*HTML element*: +<section>+
+==== 前付け
 
-*Attribute requirements*: +data-type="halftitlepage"+, +data-type="titlepage"+, +data-type="copyright-page"+, or +data-type="dedication"+, depending on content
+*HTML要素*: +<section>+
 
-*Content model*: First child must be +<h1>+ that contains frontmatter section title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*属性要件*: +data-type="halftitlepage"+, +data-type="titlepage"+, +data-type="copyright-page"+, or +data-type="dedication"+, 配下のコンテンツに応じて
 
-*Example*
+*コンテンツモデル*: 最初の子は前付けの題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子
+
+*例*
 
 ----
 <section data-type="titlepage">
@@ -171,15 +172,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Backmatter
+==== 後付け
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="colophon"+, +data-type="acknowledgments"+, +data-type="afterword"+, or +data-type="conclusion"+, depending on content
+*属性要件*: +data-type="colophon"+, +data-type="acknowledgments"+, +data-type="afterword"+, or +data-type="conclusion"+, 配下のコンテンツに応じて
 
-*Content model*: First child must be +<h1>+ that contains backmatter section title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は後付けの題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子
 
-*Example*
+*例*
 
 ----
 <section data-type="colophon">
@@ -191,15 +192,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Part
+==== 部／編
 
-*HTML element*: +<div>+
+*HTML要素*: +<div>+
 
-*Atttribute requirements*: +data-type="part"+ 
+*属性要件*: +data-type="part"+ 
 
-*Content model*: First child must be +<h1>+ that contains part title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements that compose the optional Part introduction; then one or more +<section>+ elements representing Book Component children other than a Part
+*コンテンツモデル*: 最初の子は部／編の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上の任意の部／編の前置きを構成するブロック要素; 次に、部／編以外の子として本の構成を表す0個またはそれ以上の <section> 要素
 
-*Example*
+*例*
 
 ----
 <div data-type="part">
@@ -211,15 +212,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </div>
 ----
 
-==== Table of Contents
+==== 目次
 
-*HTML element*: +<nav>+
+*HTML要素*: +<nav>+
 
-*Attribute requirements*: +data-type="toc"+
+*属性要件*: +data-type="toc"+
 
-*Content Model*: The TOC must be conformant to the specs for the http://www.idpf.org/epub/30/spec/epub30-contentdocs-20111011.html#sec-xhtml-nav[EPUB 3 Navigation document]. First child is zero or more heading elements (++<h1>-<h6>++), followed by an +<ol>+ (with +<li>+ children that can contain only a +<span>+ element or an +<a>+ element plus an optional +<ol>+ child)
+*コンテンツモデル*: 目次は http://www.idpf.org/epub/30/spec/epub30-contentdocs-20111011.html#sec-xhtml-nav[EPUB 3 Navigation document]の仕様に準拠すべきである. 最初の子は0個またはそれ以上の見出し要素(++<h1>-<h6>++), 続いて+<ol>+ (<li>の子ともに<span>要素や任意の<ol>の子をあわせて<a>要素を含めることができる)
 
-*Example*
+*例*
 
 ----
 <nav data-type="toc">
@@ -237,17 +238,17 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </nav>
 ----
 
-==== Index
+==== 索引
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: +data-type="index"+
+*属性要件*: +data-type="index"+
 
-*Content model*: First child must be +<h1>+ that contains index title; then zero or more +<h2>+ elements for subtitle content; then zero or more Block Elements; then zero or more Sect1 children (+<section data-type="sect1">+)
+*コンテンツモデル*: 最初の子は索引の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子
 
-*Best practices*: HTMLBook recommends following the http://www.idpf.org/epub/idx/[EPUB Indexes specification] and using ++<ol>++/++<li>++ elements for marking up index entries, with +data-type+ attributes used for semantic inflection as appropriate, but none of this is a formal spec requirement
+*効率的な手法*: HTMLBookは次のhttp://www.idpf.org/epub/idx/[EPUB Indexes specification]や、必要に応じて意味の変化を使用できるdata-type属性をもつ索引の見出し語をマークアップするために<ol>/<li> 要素の使用を勧めます。ただしこれは正式な仕様要件ではありません。
 
-*Example*
+*例*
 
 ----
 <section data-type="index">
@@ -266,14 +267,15 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 </section>
 ----
 
-==== Sections
+==== 節
 
-*HTML element*: +<section>+
+*HTML要素*: +<section>+
 
-*Attribute requirements*: ++data-type="sect1"++, ++data-type="sect2"++, ++data-type="sect3"++, ++data-type="sect4"++, ++data-type="sect5"++ footnote:[From DocBook vocabulary], depending on hierarchy level. +sect1+ is used for +<section>+ elements nested directly in main Book components ("chapter", "appendix", etc.). +sect2+ is used for ++<section>++ elements nested in a +sect1+ ++<section>++, +sect3+ is used for +<section>+ elements nested in a +sect2+ +<section>+, and so on. 
+*属性要件*: ++data-type="sect1"++, ++data-type="sect2"++, ++data-type="sect3"++, ++data-type="sect4"++, ++data-type="sect5"++ footnote:[DocBook語彙から], 階層レベルに応じて。
++sect1+は主な本の構成（章、付録　など）に直接ネストされた+<section>+要素に使われる。+sect2+は+sect1+ ++<section>++にネストされた+<section>+要素に使われる。+sect3+は+sect2+ ++<section>++にネストされた+<section>+要素に使われる。など
 
-*Content model*: The first child must be a main heading element corresponding to the hierarchy level indicated by +data-type+ value, as follows:
-
+*コンテンツモデル*: 最初の子は以下のデータ形式の値によって示される階層レベルに対応した主な見出し要素であるべきである。
+:
 ----
 "sect1" -> h1
 "sect2" -> h2
@@ -282,9 +284,9 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 "sect5" -> h5
 ----
 
-The heading is followed by zero or more subheading elements whose hierarchy level is one lower than the main heading (e.g., +<h2>+ for a ++sect1++), folloed by zero or more Block elements, followed by zero or more +<section>+ elements with a +data-type+ value one level lower in the hierarchy, as long as the parent section is a "sect4" or higher (e.g., +<section data-type="sect4">+ nested in +<section data-type="sect3">+)
+見出しは0個以上の小見出し要素は主な見出しの一つ下の階層レベルに続く（例：+<h2>+ は ++sect1++の下）、続いて0個以上のブロック要素、続いて0個以上の一つ下の階層のデータ形式の値を持つ+<section>+ 要素、親の節が"sect4"かそれより高い範囲に限る（例えば　+<section data-type="sect4">+は+<section data-type="sect3">+にネストされる）
 
-*Example*:
+*例*:
 
 ----
 <section data-type="sect1">
@@ -311,15 +313,15 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 <p>This is a standard paragraph with some <em>emphasized text</em></p>
 ----
 
-==== Sidebar
+==== サイドバー要素
 
-*HTML element*: +<aside>+
+*HTML要素*: +<aside>+
 
-*Attribute requirements*: +data-type="sidebar"+
+*属性要件*: +data-type="sidebar"+
 
-*Content model*: Zero or one +<h5>+ element that contains the sidebar title); then zero or more Block elements
+*コンテンツモデル*: 0個または1個の<h5>要素 ＋ 0個以上のブロック要素 (サイドバーのタイトルを含む) 
 
-*Example*:
+*例*:
 
 ----
 <aside data-type="sidebar">
@@ -328,18 +330,18 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </aside>
 ----
 
-==== Admonitions
+==== 説諭要素
 
-*HTML element*: +<div>+
+*HTML要素*: +<div>+
 
-*Attribute requirements*: +data-type="note"+, +data-type="warning"+, +data-type="tip"+, +data-type="caution"+, or +data-type="important"+, depending on the content within
+*属性要件*: +data-type="note"+ または +data-type="warning"+、 +data-type="tip"+, +data-type="caution"+ または +data-type="important”+、配下のコンテンツに応じて
 
-*Content model*: Either of the following content models is acceptable:
+*コンテンツモデル*: 以下のいずれか:
 
-* text and/or zero or more Inline elements
-* Zero or more ++<h1>++-++<h6>++ elements (for title and subtitles), followed by zero or more Block elements
+* テキストおよび0個以上のインライン要素
+* 0個以上の<h1>縲鰀<h6>要素 ＋ 0個以上のブロック要素 (タイトルやサブタイトルのための)
 
-*Examples*:
+*例*:
 
 ----
 <div data-type="note">
@@ -352,29 +354,29 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 <div data-type="warning">Make sure to get your AsciiDoc markup right!</div>
 ----
 
-==== Tables
+==== テーブル要素
 
-*HTML element*: +<table>+
+*HTML要素*: +<table>+
 
-*Content model*: Zero or one +<caption>+ elements (for titled/captioned tables); then zero or more +<colgroup>+ elements; then zero or more +<thead>+ elements; then a choice between either zero or more +<tbody>+ elements, or zero or more +<tr>+ elements; then zero or more +<tfoot>+ elements
+*コンテンツモデル*: 0個または1個の<caption>要素 (テーブルのタイトル、キャプション) ＋ 0個以上の<colgroup>要素 ＋ <thead>要素 (0個または1個のいずれかを、その後に続く要素によって選択) ＋ 0個以上の<tbody> ＋ 0個以上の<tr>要素 ＋ <tfoot>要素
 
-*Content model for <caption>*: Either of the following is acceptable:
+*コンテンツモデル<caption>要素*: 以下のいずれか:
 
-* Zero or more +<p>+ and/or +<div>+ elements
-* Text and/or zero or more Inline elements
+* 0個以上の<p>要素および<div>要素
+* テキストおよび0個以上のインライン要素
 
-*Content model for <colgroup>*: Mirrors HTML5 Specification
+*コンテンツモデル<colgroup>要素*: HTML5の仕様を参照
 
-*Content models for <thead>, <tbody>, and <tfoot>*: Mirror HTML5 Specification
+*コンテンツモデル<thead>要素、<tbody>要素、<tfoot>要素*: HTML5の仕様を参照
 
-*Content model for <tr>*: Mirrors HTML5 Specification, but see content model below for rules for child +<td>+ and +<th>+ elements
+*コンテンツモデル<tr>要素*: HTML5の仕様を参照、ただし配下の<td>要素や<th>要素は下記の内容を参照
 
-*Content model for <td> and <th> elements*: Either of the following is acceptable:
+*コンテンツモデル<td>要素、<th>要素*: 以下のいずれか:
 
-* text and/or zero or more Inline elements
-* Zero or more Block elements
+* テキストおよび0個以上のインライン要素
+* 0個以上のブロック要素
 
-*Examples*:
+*例*:
 
 ----
 <table>
@@ -411,16 +413,16 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </table>
 ----
 
-==== Figures
+==== 図版要素
 
-*HTML element*: +<figure>+
+*HTML要素*: +<figure>+
 
-*Content model*: Either of the following is acceptable:
+*コンテンツモデル*: 以下のいずれか:
 
-* A +<figcaption>+ element followed by zero or more Block elements and/or +<img>+ elements
-* Zero or more Block elements and/or +<img>+ elements, followed by a +<figcaption>+ element
+* <figcaption>要素、続いて0個以上のブロック要素 ＋ <img>要素
+* 0個以上のブロック要素 ＋ <img>要素、続いて<figcaption>要素
 
-*Example*:
+*例*:
 
 ----
 <figure>
@@ -429,18 +431,18 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </figure>
 ----
 
-==== Examples
+==== 例題要素
 
-*HTML element*: +<div>+
+*HTML要素*: +<div>+
 
-*Attribute requirements*: +data-type="example"+
+*属性要件*: +data-type="example"+
 
-*Content model*: Either of the following content models is acceptable:
+*コンテンツモデル*: 以下のいずれか:
 
-* text and/or zero or more Inline elements
-* Zero or more ++<h1>++-++<h6>++ elements (for title and subtitles), followed by zero or more Block elements
+* テキストおよび0個以上のインライン要素
+* 0個以上の<h1>縲鰀<h6>要素 (タイトルやサブタイトルのための)、続いて0個以上のブロック要素 
 
-*Example*:
+*例*:
 
 ----
 <div data-type="example">
@@ -449,30 +451,30 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </div>
 ----
 
-==== Code listings
+==== コードリスト
 
-*HTML element*: +<pre>+
+*HTML要素*: +<pre>+
 
-*Optional HTMLBook-specific attribute*: +data-code-language+, used to indicate language of code listing (e.g., +data-code-language="python"+)
+*HTMLBook固有の属性オプション*: +data-code-language+, コードリストの言語を示すために使用 (例： +data-code-language="python"+)
 
-*Example*:
+*例*:
 
 ----
 <pre data-type="programlisting">print "<em>Hello World</em>"</pre>
 ----
 
-==== Ordered lists
+==== 順序付きリスト
 
-*HTML element*: +<ol>+
+*HTML要素*: +<ol>+
 
-*Content model*: Zero or more +<li>+ children for each list item
+*コンテンツモデル*: 0個以上の各リスト項目+<li>+を必要とする。
 
-*Content model for <li> children*: Either of the following is acceptable:
+*<li>の子要素のコンテンツモデルは*: 以下のいずれかが許容されている:
 
-* text and/or zero or more Inline elements
-* Zero or more Block elements
+* テキストおよび/または0個以上のインライン要素
+* 0個以上のブロック要素
 
-*Example*:
+*例*:
 
 ----
 <ol>
@@ -485,18 +487,18 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </ol>
 ----
 
-==== Itemized lists
+==== 項目別リスト
 
-*HTML element*: +<ul>+
+*HTML要素*: +<ul>+
 
-*Content model*: Zero or more +<li>+ children for each list item
+*コンテンツモデル*: 0個以上の各リスト項目+<li>+を必要とする。
 
-*Content model for <li> children*: Either of the following is acceptable:
+*子要素<li>のコンテンツモデル*: 以下のいずれかが許容されている:
 
-* text and/or zero or more Inline elements
-* Zero or more Block elements
+* テキストおよび/または0個以上のインライン要素
+* 0個以上のブロック要素
 
-*Example*:
+*例*:
 
 ----
 <ul>
@@ -506,21 +508,21 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </ul>
 ----
 
-==== Definition lists
+==== 定義リスト
 
 
-*HTML element*: +<dl>+
+*HTML要素*: +<dl>+
 
-*Content model*: Mirrors HTML5 Specification
+*コンテンツモデル*: HTML5仕様に準ずる
 
-*Content model for <dt> children*: text and/or zero or more Inline elements
+*子要素<dt>のコンテンツモデル*: テキストおよび/または0個以上のインライン要素
 
-*Content model for <dd> children*: Either of the following is acceptable:
+*子要素<dd>のコンテンツモデル*: 以下のいずれかが許容されている:
 
-* text and/or zero or more Inline elements
-* Zero or more Block elements
+* テキストおよび/または0個以上のインライン要素
+* 0個以上のブロック要素
 
-*Example*:
+*例*:
 
 ----
 <dl>
@@ -529,16 +531,16 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </dl>
 ----
 
-==== Blockquote
+==== 引用
 
-*HTML element*: +<blockquote>+
+*HTML要素*: +<blockquote>+
 
-*Content model*: Either of the following is acceptable:
+*コンテンツモデル*: 次のいずれかが許容されている:
 
-* text and/or zero or more Inline elements
-* Zero or more Block elements
+* テキストおよび/または0個以上のインライン要素
+* 0個以上のブロック要素
 
-*Example*:
+*例*:
 
 ----
 <blockquote data-type="epigraph">
@@ -547,43 +549,41 @@ The heading is followed by zero or more subheading elements whose hierarchy leve
 </blockquote>
 ----
 
-==== Headings
+==== 見出し
 
-*HTML elements*: ++<h1>++, ++<h2>++, ++<h3>++, ++<h4>++, ++<h5>++, or ++<h6>++
+*HTML要素*: ++<h1>++, ++<h2>++, ++<h3>++, ++<h4>++, ++<h5>++, または ++<h6>++
 
-*Content Model*: text and/or zero or more Inline elements
+*コンテンツモデル*: テキスト および/または ゼロまたは複数のインライン要素
 
-*Notes*: Many main book components (e.g., chapters, parts, appendixes) require headings. The appropriate
-element from ++<h1>++-++<h6>++ is outlined below, as well as in the corresponding documentation for these
-components:
+*原注*: 多くの主な本の構成(例：章、部／編、付録) は見出しを必要とする。++<h1>++-++<h6>++からの適切な要素を下記に概説した、これらの構成に対応する文書にも同様に概説してある:
 
 ----
-book title -> h1
-part title -> h1
-chapter title -> h1
-preface title -> h1
-appendix title -> h1
-colophon title -> h1
-dedication title -> h1
-glossary title -> h1
-bibliography title -> h1
-sect1 title -> h1
-sect2 title -> h2
-sect3 title -> h3
-sect4 title -> h4
-sect5 title -> h5
-sidebar title -> h5
+本のタイトル -> h1
+部／編のタイトル -> h1
+章のタイトル -> h1
+前書きのタイトル -> h1
+付録のタイトル -> h1
+奥付のタイトル -> h1
+献辞のタイトル -> h1
+用語解説のタイトル -> h1
+参考文献のタイトル -> h1
+セクト1のタイトル -> h1
+セクト2のタイトル -> h2
+セクト3のタイトル -> h3
+セクト4のタイトル -> h4
+セクト5のタイトル -> h5
+サイドバーのタイトル -> h5
 ----
 
-==== Equation
+==== 方程式
 
-*HTML element*: +<div>++
+* HTML要素*: +<div>++
 
-*Attribute requirements*: +data-type="equation"+ footnote:[From DocBook; no close match in EPUB 3 Structural Semantics Vocabulary]
+属性要件*: +data-type="equation"+ footnote:[EPUB3の構造意味論語彙のものではなく、DocBook由来のものである]
 
-*Note: HTMLBook supports embedded MathML in HTML content documents, which can be used here.
+*原注: HTMLBookは、HTML文書にエンベッドしたMathMLをサポートしており、それはここで使用できる。
 
-*Example*:
+*例*:
 
 ----
 <div data-type="equation">
@@ -598,6 +598,7 @@ sidebar title -> h5
 </div>
 ----
 
+
 === インライン要素
 
 ==== 強調 (通常、斜体表記)
@@ -610,70 +611,69 @@ sidebar title -> h5
 <p>I <em>love</em> HTML!</p>
 ----
 
-==== Strong (generally for bold)
+==== 強調 (通常、太字表記)
 
 
-*HTML element*: +<strong>+
+*HTML要素*: +<strong>+
 
-Example:
+例:
 
 ----
 <p>I <strong>love</strong> HTML!</p>
 ----
 
-==== Literal (for inline code elements: variables, functions, etc.)
+==== リテラル (行中のプログラムコードのための要素: 変数、関数、等。)
 
-*HTML element*: +<code>+
+*HTML要素*: +<code>+
 
-Example:
+例:
 
 ----
 <p>Enter <code>echo "Hello World"</code> on the command line</p>
 ----
 
-==== General-purpose phrase markup for other styling (underline, strikethrough, etc.)
+==== その他の体裁 (下線、取り消し線、等。)のための、多目的な区切りのマークアップ 
 
-*HTML element*: +<span>+
+*HTML要素*: +<span>+
 
-Example:
+例:
 
 ----
 <p>Use your own +data-type+ or +class+ attributes for custom styling for formatting like <span data-type="strikethrough">strikethrough</span></p>
 ----
 
-==== Footnote, endnote
+==== 脚注、巻末(章末)の注
 
-*HTML element*: +<span>+
+*HTML 要素*: +<span>+
 
-*Attribute requirements*: +data-type="footnote"+ 
+*属性要件*: +data-type="footnote"+ 
 
-*Content model for footnote: text and/or zero or more Inline elements
+*脚注のコンテンツモデル: テキストおよび/またはゼロまたは複数のインライン要素
 
-*Example*:
+*例*:
 
 ----
 <p>Five out of every six people who try AsciiDoc prefer it to Markdown<span data-type="footnote">Totally made-up statistic</span></p>
 ----
 
-*Notes*: 
+*原注*: 
 
-* The <span> element does not accept block element children (and as of 2013-08-13, nor does any other HTML5 element that can be used in an inline context and is an acceptable semantic fit for footnotes)). If you need to include multiple blocks of content in a footnote, use <br/> elements to delimit them, e.g.:
+* <span> 要素はブロック要素の子 (および 2013年8月13日現在、インラインコンテクストで使用され脚注と語義が一致して受容されるような他のいかなる HTML5 要素) を受け入れない。もし複数のコンテンツのブロックを脚注に含めたいのであれば、<br/> 要素を使って区切る、例えば
 
 ----
 <p>This is a really short paragraph.<span data-type="footnote">Largely because I like to put lots and lots of content in footnotes.<br/><br/>For example, let me tell you a story about my dog...</span></p>
 ----
 
-* Desired rendering of footnote content (i.e., floating/moving footnotes to the bottom of a page or end of a section, adding appropriate marker symbols/numeration) should be handled by XSL/CSS stylesheet processing.
+* 脚注のコンテンツの望ましい表現 (例えば、ページ下部または節の後ろにフローティング/移動する脚注、適切なしるしや番号の追加) は XSL/CSS スタイルシートで処理されるはずである。
 
-==== Cross-references
+==== 相互参照
 
 
-*HTML element*: +<a>+
+*HTML 要素*: +<a>+
 
-*Attribute requirements*: +data-type="xref"+footnote:[From DocBook]; an +href+ attribute that should point to the id of a
-local HTMLBook resource referenced; +data-xrefstyle+ (optional) for specifying the style of XREF
+*属性要件*: +data-type="xref"+脚注:[DocBook 由来]、ローカルの HTMLBook リソースを参照するIDを指す +href+ 属性、 XREF のスタイルを指定するための +data-xrefstyle+ (任意)
 
-Example:
+*例*:
 
 ----
 <section id="html5" data-type="chapter">
@@ -683,40 +683,39 @@ Example:
 </section>
 ----
 
-==== Index Term
+==== 索引語
 
-*HTML element*: +<a>+
+*HTML 要素*: +<a>+
 
-*Attribute requirements*: +data-type="indexterm"+; for primary index entry value, use +data-primary+; for secondary index entry value, use +data-secondary+; for tertiary index entry value, use +data-tertiary+; for a "see" index reference, use +data-see+; for a "see also" index reference, use +data-seealso+; for a "sort" value to indicate alphabetization, use +data-primary-sortas+, +data-secondary-sortas+, or +data-tertiary-sortas+; for an "end-of-range" tag that marks the end of an index range, use +data-startref="id_of_opening_index_marker"+footnote:[Semantics from DocBook]
+*属性要件*: +data-type="indexterm"+、主たる索引の項目の値のためには +data-primary+ を使う。第二位の索引の項目の値のためには +data-secondary+ を使う。第三位の索引の項目の値のためには +data-tertiary+ を使う。現在のものに代えて使うべき索引への参照のためにはS +data-see+ を使う。現在のものに加えて使うべき索引への参照のためには +data-seealso+ を使う。アルファベット順で並べて表示するための整理のための値のためには +data-primary-sortas+、+data-secondary-sortas+、または +data-tertiary-sortas+を使う。索引の範囲の最後を示すためのタグのためには +data-startref="開始の索引マーカーのID"+footnote:[DocBook の語義由来] を使う。
 
-*Content model*: Empty
+*コンテンツモデル*: なし
 
-*Example*:
+*例*:
 
 ----
 <p>The Atlas build system<a data-type="indexterm" data-primary="Atlas" data-secondary="build system"/> lets you build EPUB, Mobi, PDF, and HTML content</p>
 ----
 
-==== Superscripts
+==== 上付き文字
 
-*HTML element*: +<sup>+
+*HTML 要素*: +<sup>+
 
-*Example*:
+*例*:
 
 ----
 <p>The area of a circle is πr<sup>2</sup></p>
 ----
 
-==== Subscripts
+==== 下付き文字
 
-*HTML element*: +<sub>+
+*HTML 要素*: +<sub>+
 
-*Example*:
+*例*:
 
 ----
 <p>The formula for water is H<sub>2</sub>O</p>
 ----
-
 === インタラクティブ要素
 
 ==== ビデオ
@@ -725,7 +724,7 @@ Example:
 
 *例*:
 
-*原注*: HTML5 インタラクティブコンテンツをサポートしていない出力フォーマットのために、フォールバックコンテンツを _強く勧める_。
+*原注*: HTML5インタラクティブコンテンツをサポートしていない出力フォーマットのために、フォールバックコンテンツを_強く勧める_。
 
 ----
 <video id="asteroids_video" width="480" height="270" controls="controls" poster="images/fallback_image.png">
@@ -736,13 +735,13 @@ Example:
 </video>
 ----
 
-==== Audio
+==== 音声
 
-*HTML element*: +<audio>+
+*HTML 要素*: +<audio>+
 
-*Note*: Fallback content is _strongly recommended_ for output formats that do not support HTML5 interactive content
+*原注*: HTML5 インタラクティブコンテンツをサポートしない出力形式のために、音声が再生できなかった場合の代替のコンテンツを用意することを_強く推奨する_。
 
-*Example*:
+*例*:
 
 ----
 <audio id="new_slang">
@@ -754,15 +753,13 @@ Example:
 </audio>
 ----
 
-==== Canvas
+==== キャンバス
 
-*HTML element*: +<canvas>+
+*HTML 要素*: +<canvas>+
 
-*Notes*: Should include fallbacks for environments that don't support HTML5 or JavaScript (e.g., link or image). 
-You may include +<script>+ elements in your HTMLBook document +<head>+ elements to include/reference JS code for
-Canvas handling.
+*原注*: HTML5 または JavaScript をサポートしない環境のために、代替となるもの (例えばリンクまたは画像) を含めるべきである。 
 
-*Examples*:
+*例*:
 
 ----
 <canvas id="canvas" width="400" height="400">
@@ -780,7 +777,7 @@ Canvas handling.
 
 *コンテンツモデル*: なし
 
-*原注*: すべての +<meta>+ 要素はHTMLファイルの +<head>+ 要素の子であるべきである。
+*原注*: すべての+<meta>+要素はHTMLファイルの+<head>+要素の子であるべきである。
 
 *例*:
 
@@ -796,7 +793,7 @@ Canvas handling.
 [[block_elements]]
 ==== ブロック要素
 
-HTMLBook では、HTML5 仕様においてフローコンテンツ (除外されている要素はまた、ヘディングコンテンツ、フレージングコンテンツ、またはセクショニングコンテンツとして分類されている) として分類されている要素の大多数はブロック要素と見なされている。一覧を示す:
+HTMLBookでは、HTML5仕様においてフローコンテンツ（除外されている要素はまた、ヘッディングコンテンツ、フレージングコンテンツ、またはセクショニングコンテンツとして分類されている）として分類されている要素の大多数はブロック要素として考えられている。一覧を示す:
 
 * +<address>+
 * +<aside>+
@@ -813,13 +810,13 @@ HTMLBook では、HTML5 仕様においてフローコンテンツ (除外され
 * +<hr>+
 * +<iframe>+
 * +<map>+
-* +<math>+ (MathML の語彙; http://www.w3.org/1998/Math/MathML の名前空間下に置かれるべき)
+* +<math>+ (MathMLの語彙; http://www.w3.org/1998/Math/MathMLの名前空間下に置かれるべき)
 * +<menu>+
 * +<object>+
 * +<ol>+
 * +<p>+
 * +<pre>+
-* +<svg>+ (SVG の語彙; http://www.w3.org/2000/svg の名前空間下に置かれるべき)
+* +<svg>+ (SVGの語彙; http://www.w3.org/2000/svgの名前空間下に置かれるべき)
 * +<table>+
 * +<ul>+
 * +<video>+
@@ -827,7 +824,7 @@ HTMLBook では、HTML5 仕様においてフローコンテンツ (除外され
 [[inline_elements]]
 ==== インライン要素
 
-HTMLBook では、HTML5 仕様においフレージングコンテンツとして分類されている要素の大多数はインライン要素と見なされている。一覧を示す:
+HTMLBookでは、HTML5仕様においてフレージングコンテンツとして分類されている要素の大多数はインライン要素として考えられている。一覧を示す:
 
 * +<a>+
 * +<abbr>+
