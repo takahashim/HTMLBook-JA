@@ -4,7 +4,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 
 コンテンツモデルの多くについては「ブロック要素」または「インライン要素」を参照のこと；これらの各カテゴリに属するHTML5の要素の対応するリストについては、<<block_elements, Block Elements>> および <<inline_elements, Inline Elements>>を参照のこと。
 
-明記されていないコンテンツモデルまたは属性要件については、HTMLBookはhttp://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification]に対応する要件を採用している。
+明記されていないコンテンツモデルまたは属性要件については、HTMLBookは http://www.w3.org/html/wg/drafts/html/master/[HTML5 Specification]に対応する要件を採用している。
 
 === 改訂履歴と注記
 
