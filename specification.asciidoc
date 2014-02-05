@@ -116,7 +116,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 
 *コンテンツモデル*: 最初の子は用語集の題名を含む+<h1>+であるべきである。; 次に、副題名のコンテンツとして、0個またはそれ以上の+<h2>+要素; 次に、0個またはそれ以上のブロック要素; 次に、0個またはそれ以上のSect1の子 (+<section data-type="sect1">+)
 
-*効率的な手法*:用語集の用語の一覧は+data-type+="glossary"の+<dl>+要素、+data-type+="glossterm"の+<dt>+の子、+data-type+="glossdef"の+<dd>+の子を使用してマークアップするべきである。用語の文字列はhttps://developer.mozilla.org/en-US/docs/HTML/Element/dfn[++<dfn>++]でラップするべきである。ただしこれは正式な仕様要件ではない。
+*効率的な手法*:用語集の用語の一覧は+data-type+="glossary"の+<dl>+要素、+data-type+="glossterm"の+<dt>+の子、+data-type+="glossdef"の+<dd>+の子を使用してマークアップするべきである。用語の文字列は https://developer.mozilla.org/en-US/docs/HTML/Element/dfn[++<dfn>++] でラップするべきである。ただしこれは正式な仕様要件ではない。
 
 *例*
 
