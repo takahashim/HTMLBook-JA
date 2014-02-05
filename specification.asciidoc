@@ -274,7 +274,7 @@ HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性�
 *属性要件*: ++data-type="sect1"++, ++data-type="sect2"++, ++data-type="sect3"++, ++data-type="sect4"++, ++data-type="sect5"++ footnote:[DocBook語彙から], 階層レベルに応じて。
 +sect1+は主な本の構成（章、付録　など）に直接ネストされた+<section>+要素に使われる。+sect2+は+sect1+ ++<section>++にネストされた+<section>+要素に使われる。+sect3+は+sect2+ ++<section>++にネストされた+<section>+要素に使われる。など
 
-*コンテンツモデル*: 最初の子は以下のデータ形式の値によって示される階層レベルに対応した主な見出し要素であるべきである。
+*コンテンツモデル*: 最初の子は以下の +data-type+ の値によって示される階層レベルに対応した主な見出し要素であるべきである。
 :
 ----
 "sect1" -> h1
