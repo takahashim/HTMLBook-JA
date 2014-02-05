@@ -1,6 +1,6 @@
 == HTMLBook仕様: ワーキングドラフト (最終更新日 2013年12月29日)
 
-HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性の特有の意味的活用については、別途注記がない限りhttp://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary]による。
+HTMLBook仕様でのHTML5要素の要件は以下の通り。+data-type+属性の特有の意味的活用については、別途注記がない限り http://idpf.org/epub/vocab/structure/[EPUB 3 Structural Semantics Vocabulary] による。
 
 コンテンツモデルの多くについては「ブロック要素」または「インライン要素」を参照のこと；これらの各カテゴリに属するHTML5の要素の対応するリストについては、<<block_elements, Block Elements>> および <<inline_elements, Inline Elements>>を参照のこと。
 
