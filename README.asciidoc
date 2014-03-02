@@ -20,6 +20,8 @@ HTMLBook自体は以下のように特徴づけられています:
 
 https://github.com/oreillymedia/HTMLBook/blob/master/specification.asciidoc
 
+（訳注: 日本語訳は https://github.com/JAGAT-XML-publishing-study-group/HTMLBook-JA/blob/master/specification.asciidoc ）
+
 ここからHTMLBookスキーマを入手してください:
 
 https://github.com/oreillymedia/HTMLBook/tree/master/schema
