@@ -49,6 +49,6 @@ $ xmllint --noout --schema htmlbook.xsd <your_html_filename>.html
 
 * HTMLBookについてバグや機能の要望があれば、GitHubのIssuesタブを通じて投稿してください。
 
-* 来月、本をHTMLBookでオーサリングおよび制作するための付属ツールをHTMLBookプロジェクトに追加します:CSSスタイルシート、EPUB/Mobiを生成するためのスクリプト、そのほか。
+* 今後数か月の間に、本をHTMLBookでオーサリングおよび制作するための付属ツールをHTMLBookプロジェクトに追加します:CSSスタイルシート、EPUB/Mobiを生成するためのスクリプト、そのほか。
 
 * HTMLBookプロジェクトに貢献したければ、プルリクエストを送ってください！
